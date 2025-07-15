@@ -11,7 +11,7 @@ export default function Users() {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/users/getUser")
+      const response = await fetch("https://leaderboard-khp8.onrender.com/api/users/getUser")
       const data = await response.json()
       setUsers(data.users || [])
     } catch (error) {
@@ -27,7 +27,7 @@ export default function Users() {
 
     setLoading(true)
     try {
-      const response = await fetch("http://localhost:5000/api/users/create", {
+      const response = await fetch("https://leaderboard-khp8.onrender.com/api/users/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export default function Users() {
 
     setClaimLoading(true)
     try {
-      const response = await fetch("http://localhost:5000/api/users/claim", {
+      const response = await fetch("https://leaderboard-khp8.onrender.com/api/users/claim", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

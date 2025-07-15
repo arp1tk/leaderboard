@@ -11,7 +11,7 @@ export default function Leaderboard() {
   const fetchUsers = async () => {
     setLoading(true)
     try {
-      const response = await fetch("http://localhost:5000/api/users/getUser")
+      const response = await fetch("https://leaderboard-khp8.onrender.com/api/users/getUser")
       const data = await response.json()
       setUsers(data.users || [])
     } catch (error) {
@@ -24,7 +24,7 @@ export default function Leaderboard() {
   const resetAllPoints = async () => {
     setResetLoading(true)
     try {
-      const response = await fetch("http://localhost:5000/api/users/reset", {
+      const response = await fetch("https://leaderboard-khp8.onrender.com/api/users/reset", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

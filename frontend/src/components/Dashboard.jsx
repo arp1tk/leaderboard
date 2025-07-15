@@ -15,11 +15,11 @@ export default function Dashboard() {
     setLoading(true)
     try {
       // Fetch users
-      const usersResponse = await fetch("http://localhost:5000/api/users/getUser")
+      const usersResponse = await fetch("https://leaderboard-khp8.onrender.com/api/users/getUser")
       const usersData = await usersResponse.json()
 
       // Fetch history
-      const historyResponse = await fetch("http://localhost:5000/api/users/getHistory")
+      const historyResponse = await fetch("https://leaderboard-khp8.onrender.com/api/users/getHistory")
       const historyData = await historyResponse.json()
 
       const users = usersData.users || []

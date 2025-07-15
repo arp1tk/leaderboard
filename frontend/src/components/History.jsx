@@ -9,7 +9,7 @@ export default function History() {
   const fetchHistory = async () => {
     setLoading(true)
     try {
-      const response = await fetch("http://localhost:5000/api/users/getHistory")
+      const response = await fetch("https://leaderboard-khp8.onrender.com/api/users/getHistory")
       const data = await response.json()
       setHistory(data.history || [])
     } catch (error) {
