@@ -6,7 +6,7 @@ export default function Sidebar({ activeTab, setActiveTab, sidebarOpen, setSideb
     { id: "leaderboard", label: "Leaderboard", icon: Trophy },
     { id: "users", label: "Users", icon: Users },
     { id: "history", label: "History", icon: History },
-    { id: "settings", label: "Settings", icon: Settings },
+   
   ]
 
   const handleTabClick = (tabId) => {
